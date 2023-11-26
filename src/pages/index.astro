@@ -1,0 +1,26 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/landing/Hero.astro";
+import Body from "../components/landing/Body.astro";
+import { AstroSeo } from "@astrolib/seo";
+---
+
+<!---
+Use AstroSeo in all the pages you want different Seo than the index page
+-->
+<AstroSeo
+  title="Glenn Gasmin"
+  description="Glenn Gasmin website"
+  canonical="http://glenngasm.in"
+  openGraph={{
+    url: "https://glenngasmin.com",
+    title: "Glenn Gasmin website",
+    description: "Glenn's website",
+    site_name: "Glenn Gasmin website",
+  }}
+
+/>
+<BaseLayout>
+  <Hero />
+  <Body />
+</BaseLayout>
